@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="./signin.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="h-screen">
+    <div class="p-5 flex flex-col justify-center items-center h-full">
+      <h1 class="font-bold">Sign In</h1>
+      <div class="w-full max-w-lg">
+        <form
+          name="signinForm"
+          class="pt-6 pb-8 mb-4"
+          onsubmit="return validateForm(event)"
+        >
+          <div class="mb-4">
+            <input
+              class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="text"
+              placeholder="Email address or username"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="flex justify-center mt-5 w-full">
+            <div class="flex items-center w-1/2">
+              <input class="h-8" type="checkbox" id="remember-me" />
+              <label class="px-2 text-gray-600" for="remember-me"
+                >Remember Me</label
+              >
+            </div>
+            <button
+              class="bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full w-1/2"
+              type="submit"
+            >
+              LOG IN
+            </button>
+          </div>
+          <div class="flex justify-center mt-5 w-full">
+            <a
+              id="forgot-password"
+              class="text-green-400"
+              href="./forgot-password.html"
+              >Forgot your password?</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
